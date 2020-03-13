@@ -410,6 +410,8 @@
         <img class="tb-information" rel="information" src="/svg/information_icon.svg"
              data-bind="click: connectionInfo.show,
                         css: { disabled: !thisUser() }">
+        <img class="tb-disconnect" data-bind="click: resetClient"
+                      rel="Disconnect" src="/svg/disconnect.png">
         <div class="divider"></div>
         <img class="tb-mute" data-bind="visible: !selfMute(),
                               click: function () { requestMute(thisUser()) }"
