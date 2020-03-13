@@ -662,7 +662,10 @@ class GlobalBindings {
     this.resetClient = () => {
       if (this.client) {
         this.client.disconnect()
+      	this.connectDialog.show();
       }
+      // hide widget from matrix since we're now disconnected
+      window.matrixWidget.setAlwaysOnScreen(false);
       this.client = null
       this.selected(null).root(null).thisUser(null)
     }
